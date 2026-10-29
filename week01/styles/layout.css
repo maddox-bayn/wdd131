@@ -1,0 +1,67 @@
+/* --- Global Styles & Typography --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc; /* Light slate background */
+  color: #334155;            /* Dark slate text */
+}
+
+/* --- 1. CSS Grid on the Body --- */
+body {
+  display: grid;
+  /* Creates 3 distinct rows: header, main content (expands), and footer */
+  grid-template-rows: auto 1fr auto; 
+  /* Forces the body to take up at least the full height of the viewport */
+  min-height: 100vh; 
+}
+
+/* --- 2. CSS Flexbox on the Navigation --- */
+header {
+  background-color: #1e293b; /* Deep slate blue header */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  
+  /* Flexbox to space out logo and navigation items horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  /* Flexbox to arrange the link items in a neat row */
+  display: flex;
+  gap: 1.5rem; /* Even spacing between links */
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8; /* Bright sky blue hover accent */
+}
+
+/* --- Section Formatting --- */
+main {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer {
+  background-color: #0f172a; /* Darker slate footer */
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
