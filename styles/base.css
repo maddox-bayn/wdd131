@@ -46,32 +46,26 @@ nav a:hover {
     color: #1a365d;
 }
 
-/* Main Content Layout */
+/* Consolidated Main Content Layout (CSS Grid) */
 main {
     max-width: 900px;
     margin: 2rem auto;
     padding: 0 1rem;
     flex: 1;
-}
-
-main h1 {
-    text-align: center;
-    color: #1a365d;
-    margin-bottom: 2rem;
-}
-
-/* CSS Grid for Cards */
-main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-/* Override h1 to span full grid row if columns split */
+/* Consolidated Main H1 Typography */
 main h1 {
+    text-align: center;
+    color: #1a365d;
+    margin-bottom: 2rem;
     grid-column: 1 / -1;
 }
 
+/* Card Elements */
 .card {
     background: #fff;
     border-radius: 8px;
