@@ -1,4 +1,4 @@
-/* Core Styling Rules */
+/* 1. Universal Body Layout */
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Navigation */
+/* 2. Header Box */
 header {
     background-color: #1a365d;
     color: #fff;
@@ -18,6 +18,7 @@ header {
     text-align: center;
 }
 
+/* 3. Course Title Span */
 #course-title {
     display: block;
     font-size: 1.8rem;
@@ -25,6 +26,7 @@ header {
     margin-bottom: 1rem;
 }
 
+/* 4. Flex Navigation Menu */
 nav {
     display: flex;
     justify-content: center;
@@ -32,6 +34,7 @@ nav {
     flex-wrap: wrap;
 }
 
+/* 5. Navigation Anchors */
 nav a {
     color: #fff;
     text-decoration: none;
@@ -41,12 +44,13 @@ nav a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* 6. Navigation Hover States */
 nav a:hover {
     background-color: #fff;
     color: #1a365d;
 }
 
-/* Consolidated Main Content Layout (CSS Grid) */
+/* 7. Centered Grid Main Block (Only Entry for 'main') */
 main {
     max-width: 900px;
     margin: 2rem auto;
@@ -57,7 +61,7 @@ main {
     gap: 2rem;
 }
 
-/* Consolidated Main H1 Typography */
+/* 8. Full-Width Heading (Only Entry for 'main h1') */
 main h1 {
     text-align: center;
     color: #1a365d;
@@ -65,7 +69,7 @@ main h1 {
     grid-column: 1 / -1;
 }
 
-/* Card Elements */
+/* 9. Layout Cards */
 .card {
     background: #fff;
     border-radius: 8px;
@@ -77,11 +81,13 @@ main h1 {
     text-align: center;
 }
 
+/* 10. Card Headings */
 .card h2 {
     color: #2c5282;
     margin-top: 0;
 }
 
+/* 11. Card Images */
 .card img {
     max-width: 100%;
     height: auto;
@@ -89,7 +95,7 @@ main h1 {
     margin: 1rem 0;
 }
 
-/* Footer Styling */
+/* 12. Footer Block */
 footer {
     background-color: #1a365d;
     color: #cbd5e0;
@@ -99,6 +105,7 @@ footer {
     margin-top: auto;
 }
 
+/* 13. Footer Paragraphs */
 footer p {
     margin: 0.5rem 0;
 }
