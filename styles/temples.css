@@ -33,6 +33,7 @@ header h2 {
 
 /* Hamburger Button */
 #menu-button {
+    display: block;
     background: none;
     border: none;
     color: white;
@@ -50,6 +51,7 @@ header h2 {
 
 #navigation.show {
     display: flex;
+    flex-direction: column;
 }
 
 nav a {
