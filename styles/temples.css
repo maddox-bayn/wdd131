@@ -41,14 +41,14 @@ header h2 {
 }
 
 /* Navigation */
-.nav {
+#navigation {
     display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 15px;
 }
 
-.nav.show {
+#navigation.show {
     display: flex;
 }
 
