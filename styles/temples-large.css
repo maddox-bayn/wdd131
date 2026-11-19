@@ -7,7 +7,7 @@
     }
 
     /* Navigation */
-    nav {
+    #navigation {
         display: flex;
         flex-direction: row;
         width: auto;
