@@ -88,10 +88,51 @@ const temples = [
   // Add more temple objects here...
   {
     templeName: "Accra Ghana",
-    location: "Accra Ghana",
-    dedicated: "11 January 2004 by Gordon B. Hinckley",
+    location: "Accra, Ghana",
+    dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
-    "https://churchofjesuschristtemples.org/accra-ghana-temple/photographs/"
+    "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+  },
+  {
+    templeName: "Manhattan New York Temple",
+    location: "Manhattan, New York, United State",
+    dedicated: "2004, June, 13",
+    area: 20630,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manhattan-new-york-temple/manhattan-new-york-temple-40080-main.jpg"
+  },
+  {
+    templeName: "San Antonio Texas Temple",
+    location: "San Antonio, Texas, United State",
+    dedicated: "2005, May, 22",
+    area: 16800,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/san-antonio-texas-temple/san-antonio-texas-temple-55647-main.jpg"
   }
 ];
+
+function displayTemples(temples) {
+    // clear existing cards
+    templeContainer.replaceChild();
+    temples.forEach((temple) => {
+        console.log(temple.templeName);
+
+        const figure = document.createElement("figure");
+
+        const img = document.createElement("img");
+
+        img.src = temple.imageUrl;
+        
+        img.alt = templeName
+
+        img.loading = "lazy"
+
+        const figcaption = document.createElement('figcaption');
+        figcaption.textContent = temple.templeName
+
+        figure.append(img, figcaption)
+
+        templeContainer.appendChild(figure);
+    });
+}
+// Calls the function immediately
+displayTemples(temples);
