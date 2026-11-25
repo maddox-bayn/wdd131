@@ -111,9 +111,12 @@ const temples = [
 ];
 
 function displayTemples(temples) {
-    // clear existing cards
-    templeContainer.replaceChild();
+
+    // Clear existing cards
+    templeContainer.innerHTML = "";
+
     temples.forEach((temple) => {
+
         console.log(temple.templeName);
 
         const figure = document.createElement("figure");
@@ -121,18 +124,26 @@ function displayTemples(temples) {
         const img = document.createElement("img");
 
         img.src = temple.imageUrl;
-        
-        img.alt = templeName
+        img.alt = temple.templeName;
+        img.loading = "lazy";
 
-        img.loading = "lazy"
+        const figcaption = document.createElement("figcaption");
 
-        const figcaption = document.createElement('figcaption');
-        figcaption.textContent = temple.templeName
+        figcaption.textContent = temple.templeName;
 
-        figure.append(img, figcaption)
+        const locationName = document.createElement("p");
+        locationName.textContent = temple.location;
 
+        const dedicationDate = document.createElement("p");
+        dedicationDate.textContent = temple.dedicated;
+
+        const sqft = document.createElement("p");
+        sqft.textContent = temple.area
+
+        figure.append(img, figcaption, locationName, dedicationDate, sqft);
         templeContainer.appendChild(figure);
     });
 }
+
 // Calls the function immediately
 displayTemples(temples);
